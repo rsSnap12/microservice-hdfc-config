@@ -20,7 +20,7 @@ eureka:
 spring:
   config:
     activate:
-      on-profile: USER-SERVICE
+      on-profile: user-service
 
   datasource:
     url: jdbc:postgresql://localhost:5432/USERdb
