@@ -1,3 +1,6 @@
+# ===============================
+# COMMON CONFIG (ALL SERVICES)
+# ===============================
 spring:
   jpa:
     hibernate:
@@ -9,5 +12,65 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
+
+# ===============================
+# USER-SERVICE CONFIG
+# ===============================
+---
+spring:
+  config:
+    activate:
+      on-profile: USER-SERVICE
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/USERdb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+# ===============================
+# ACCOUNTSERVICE CONFIG
+# ===============================
+---
+spring:
+  config:
+    activate:
+      on-profile: ACCOUNTSERVICE
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/accountServiceDb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+# ===============================
+# LOANSERVICE CONFIG
+# ===============================
+---
+spring:
+  config:
+    activate:
+      on-profile: LOANSERVICE
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/LoanServiceDb
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+
+# ===============================
+# TRANSACTIONSERVICE CONFIG
+# ===============================
+---
+spring:
+  config:
+    activate:
+      on-profile: TRANSACTIONSERVICE
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/TransacationData
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
 
 
