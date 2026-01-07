@@ -35,7 +35,7 @@ spring:
 spring:
   config:
     activate:
-      on-profile: ACCOUNTSERVICE
+      on-profile: accountsservice
 
   datasource:
     url: jdbc:postgresql://localhost:5432/accountServiceDb
@@ -50,7 +50,7 @@ spring:
 spring:
   config:
     activate:
-      on-profile: LOANSERVICE
+      on-profile: loanservice
 
   datasource:
     url: jdbc:postgresql://localhost:5432/LoanServiceDb
@@ -65,7 +65,7 @@ spring:
 spring:
   config:
     activate:
-      on-profile: TRANSACTIONSERVICE
+      on-profile: transactionservice
 
   datasource:
     url: jdbc:postgresql://localhost:5432/TransacationData
